@@ -6,6 +6,6 @@ def display_inventory(inventory):
         print(str(inventory[k]) + " : " + k)
     print("Total amount of items: " + str(item_total))
 
-inventory = {"toach":6, "gold":42, "bow":32, "shuriken":23}
+inventory = {"torch":6, "gold":42, "bow":32, "shuriken":23}
 
 display_inventory(inventory)
