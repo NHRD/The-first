@@ -30,4 +30,4 @@ for l in range(len(table_data[0])):
 
 for n in result:
        
-        print(" ".join(n))
+        print("".join(n))
