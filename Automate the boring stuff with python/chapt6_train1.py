@@ -20,7 +20,7 @@ for i in table_data:
 for k in col_width:
     if sum_width < k:
         sum_width = k
-print(sum_width)
+#print(sum_width)
 
 for l in range(len(table_data[0])):
     for m in range(len(table_data)):
