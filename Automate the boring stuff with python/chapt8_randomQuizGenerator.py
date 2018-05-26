@@ -9,5 +9,35 @@ capitals = {"北海道" : "札幌市","青森県" : "青森市","岩手県" : "�
 "徳島県" : "徳島市","香川県" : "高松市","愛媛県" : "松山市","高知県" : "高知市","福岡県" : "福岡市","佐賀県" : "佐賀市",
 "長崎県" : "長崎市","熊本県" : "熊本市","大分県" : "大分市","宮崎県" : "宮崎市","鹿児島県" : "鹿児島市","沖縄県" : "那覇市"}
 
-for quiz_num in range(35):
-    quiz_file = open(".\test\capita")
+for quiz_num in range(5):
+    quiz_file = open(".\\The-first\\Automate the boring stuff with python\\test\\capitalsquiz{}.txt".format(quiz_num + 1), "w")
+    answer_key_file = open(".\\The-first\\Automate the boring stuff with python\\test\\capitalsquiz_answers{}.txt".format(quiz_num + 1), "w")
+
+    quiz_file.write("name:\n\ndate:\n\nsemester:\n\n")
+    quiz_file.write((" " * 20) + "Quiz (No.{})".format(quiz_num + 1))
+    quiz_file.write("\n\n")
+
+    prefectures = list(capitals.keys())
+    random.shuffle(prefectures)
+    
+    for questions_num in range(len(prefectures)):
+
+        correct_answer = capitals[prefectures[questions_num]]
+        wrong_answers = list(capitals.values())
+        del wrong_answers[wrong_answers.index(correct_answer)]
+        wrong_answers = random.sample(wrong_answers, 3)
+        answer_options = wrong_answers + [correct_answer]
+        random.shuffle(answer_options)
+
+        quiz_file.write("{}. What is the name of {} capital?\n".format(questions_num + 1, prefectures[questions_num]))
+        
+        for i in range(4):
+            quiz_file.write("{}. {}\n".format("ABCD"[i], answer_options[i]))
+
+        quiz_file.write("\n")
+
+        answer_key_file.write("{}. {}\n".format(questions_num + 1, "ABCD"[answer_options.index(correct_answer)]))
+
+quiz_file.close()
+answer_key_file.close()
+
