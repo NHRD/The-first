@@ -1,7 +1,6 @@
 import requests
 import urllib
 import bs4
-import os
 
 res = requests.get("https://news.google.com/")
 print(type(res))
