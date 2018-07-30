@@ -2,6 +2,8 @@ import requests
 import urllib
 import bs4
 
+#this is a comment for test of git push
+
 res = requests.get("https://news.google.com/")
 print(type(res))
 #print(res.status_code)
