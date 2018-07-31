@@ -31,4 +31,3 @@ for tag in soup.find_all("a"):
         continue
     if "html" in url:
         print("\n" + url)
-"""
