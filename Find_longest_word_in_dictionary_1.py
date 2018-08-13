@@ -6,7 +6,7 @@ import logging
 logging.basicConfig(level = logging.DEBUG, format = "%(asctime)s - %(levelname)s - %(message)s")
 logging.debug("program start.")
 
-#logging.disable(logging.DEBUG)
+logging.disable(logging.DEBUG)
 
 def find_longest_word_in_string(letters, words):
     letter_positions = collections.defaultdict(list)
@@ -52,10 +52,12 @@ def find_longest_word_in_string(letters, words):
             return word
 
 if __name__ == '__main__':
-    #print(subdict(sys.argv[1], sys.argv[2:]))
+    print(find_longest_word_in_string(sys.argv[1], sys.argv[2:]))
+    #コマンドラインから文字列と単語を指定して実行。
 
-    letters = "abppplee"
+    """letters = "abppplee"
     words = ["able", "ale", "apple", "bale", "kangaroo"]
-    print(find_longest_word_in_string(letters, words))
+    print(find_longest_word_in_string(letters, words))"""
 
-#コマンドラインから直接スクリプトファイルを実行した場合は「__name__という変数（属性）の中に自動的に__main__を代入する」操作が一番はじめにで行われる。
+#コマンドラインから直接スクリプトファイルを実行した場合は「__name__という変数（属性）の中に自動的に
+# __main__を代入する」操作が一番はじめにで行われる。
