@@ -1,5 +1,5 @@
 S = "abppplee"
-D = ["able", "ale", "apple", "bale", "kangaroo"]
+D = ["jam", "jamboleeee", "able", "ale", "apple", "bale", "kangaroo"]
 
 print("S:" + S)
 print("D:{}" .format(D))
