@@ -50,11 +50,12 @@ def find_longest_word_in_string(letters, words):
         else:
             return word
 
-if __name__ == '__main__':
-    print(find_longest_word_in_string(sys.argv[1], sys.argv[2:]))
+    #print(find_longest_word_in_string(sys.argv[1], sys.argv[2:]))
     #コマンドラインから文字列と単語を指定して実行。
 
-    """letters = "abppplee"
+if __name__ == '__main__':
+
+    letters = "abppplee"
     words = ["able", "ale", "apple", "bale", "kangaroo"]
     print(find_longest_word_in_string(letters, words))"""
 
